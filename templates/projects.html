@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Projects
+{% endblock %}
+
+{% block main %}
+    <div class="mb-5"></div>
+    <h1>Projects</h1>
+    <div class="mb-5"></div>
+    <div class="card mb-3 border-0">
+        <div class="card-body">
+            <h5 class="card-title">Game - Raised By Robots.</h5>
+            <p class="card-text">
+                I made this game in 2 days based in Chrome's dinosaur game.
+                I used MIT's <a href="https://scratch.mit.edu/">Scratch</a> for coding,
+                <a href="https://www.pixilart.com/">Pixilart</a> for the artwork and
+                <a href="https://www.beepbox.co/">BeepBox</a> for the music. Some of the
+                HUD elements from the original game are used.
+            </p>
+            <p>Use the spacebar to jump, and the down arrow to hit.</p>
+            <p class="card-text"><small class="text-muted">Made for CS50x Final Project</small></p>
+        </div>
+        <div  class="embed-responsive embed-responsive-21by9">
+            <iframe src="https://scratch.mit.edu/projects/846637506/embed" class="embed-responsive-item" width="630" height="522" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </div>
+    <div class="mb-5"></div>
+    <div class="card mb-3 border-0">
+        <div class="card-body">
+            <h5 class="card-title">Python Project - Grocery Around the World.</h5>
+            <p class="card-text">
+                This was my CS50p final project. The program is run in Python and let´s the user.
+                type in a country and the program requests FAO's information to ultimately compare
+                the cost of a grocery list between 2 selected countries, or to just create a single
+                basic grocery list for a selected country.
+            </p>
+            <p>Link to git repository</p>
+            <p class="card-text"><small class="text-muted">Made for CS50p Final Project</small></p>
+        </div>
+        <div  class="col-md-5">
+            <img src="static/assets/home.png" class="img-fluid rounded-start" alt="...">
+        </div>
+    </div>
+    <div class="mb-5"></div>
+    <div class="card mb-3 border-0">
+        <div class="card-body">
+            <h5 class="card-title">Python Project - SQL to graph.</h5>
+            <p class="card-text">
+                This was my first paid programming job. The program is run in Python and connects to a sql database
+                to compare the price fluctuation in a US state across time to finally output a linear graph for this.
+                The project relyd in mysql library. Sadly it never got finished.
+            </p>
+            <p>Link to git repository</p>
+            <p class="card-text"><small class="text-muted">Made for a construction company in the U.S.</small></p>
+        </div>
+        <div  class="col-md-5">
+            <img src="static/assets/home.png" class="img-fluid rounded-start" alt="...">
+        </div>
+    </div>
+    <div class="mb-5"></div>
+    <div class="card mb-3 border-0">
+        <div class="card-body">
+            <h5 class="card-title">Python Project - Clash Report.</h5>
+            <p class="card-text">
+                The most interesting project so far and also the one I have dedicated the most time. The program creates an app with Tkinter
+                that dynamically connects to the APS("Autodesk Platforming Services") API´s. It allows the user to connect to the company (construction) 
+                projects and request clashes between BIM("Building Model Information") models, and from this finally generates CSV files that allows the company
+                to evaluate the contracters solution to this clashes across time.
+            </p>
+            <p>Link to git repository</p>
+            <p class="card-text"><small class="text-muted">Made for a construction company in the U.S.</small></p>
+        </div>
+        <div  class="col-md-5">
+            <img src="static/assets/home.png" class="img-fluid rounded-start" alt="...">
+        </div>
+    </div>
+    <div class="mb-5"></div>
+    <div class="card mb-3 border-0">
+        <div class="card-body">
+            <h5 class="card-title">Python Project - Procore PDF Upload.</h5>
+            <p class="card-text">
+                The challenge in this project was to create a simple windows app that allows the user to 
+                bypass the PDF manual upload in procore website. This works by generating several requests
+                to the Procore´s API and let the user select a folder from which to upload the PDF, then parsing
+                the file names as string insert the code and name of the PDF drawing to the project folder. Saving a lot
+                of time to the end-user.
+            </p>
+            <p>Link to git repository</p>
+            <p class="card-text"><small class="text-muted">Made for a BIM company in the U.S.</small></p>
+        </div>
+        <div  class="col-md-5">
+            <img src="static/assets/home.png" class="img-fluid rounded-start" alt="...">
+        </div>
+    </div>
+{% endblock %}

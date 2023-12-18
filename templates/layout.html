@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- http://getbootstrap.com/docs/5.1/ -->
+        <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+        <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"></script>
+        <link rel="icon" type="image/svg" href="static/assets/home.svg">
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <title>Cristher Loves Computers | {% block title %}{% endblock %}</title>
+
+    </head>
+
+    <body>
+
+        <nav class="navbar bg-light bg-body-tertiary fixed-top" style="background-color: white !important;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Cristher Loves Computers</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="line"></span> 
+                <span class="line"></span> 
+                <span class="line" style="margin-bottom: 0;"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="/" style="color: black;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="/projects" style="color: black;">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#" style="color: rgb(158, 158, 158);">About</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+        {% if get_flashed_messages() %}
+            <header>
+                <div class="alert alert-primary mb-0 text-center" role="alert">
+                    {{ get_flashed_messages() | join(" ") }}
+                </div>
+            </header>
+        {% endif %}
+
+        <main class="container-fluid py-5 text-center">
+            {% block main %}{% endblock %}
+        </main>
+    </body>
+</html>
